@@ -17,6 +17,7 @@ class StrawberryApi(object):
     username = settings.USERNAME
     password = settings.PASSWORD
     threads = []
+    timers = []
 
     links = {
         "clients": settings.BASE_LINK + "/webservice/clients/",
@@ -30,27 +31,34 @@ class StrawberryApi(object):
 
         self.login(username, password)
 
-        self.threads.append(Thread(target=self.update_client))
-
-        client_update_timer = RepeatedTimer(60, self.update_client)
+        self.initialize_threads()
+        self.initialize_event_timers()
 
     def login(self, username, password):
         self.connection = requests.Session()
         self.connection.auth = (self.username, self.password)
 
+    def initialize_threads(self):
+        self.threads.append(Thread(target=self.update_client))
+
+    def initialize_event_timers(self):
+        self.timers.append(RepeatedTimer(1, self.update_client))
+
+    def send_data(self, page_url, data):
+        data = json.dumps(data)
+        headers = {'Content-type': 'application/json'}
+        a = self.connection.patch(
+            url=page_url,
+            data=data,
+            headers=headers
+        )
+
     def update_client(self, data=None):
+        print "sem notri"
         test_data = {
             'name': 'Janez',
             'description': 'Jerebica',
             'status': True,
-            'port': 123
+            'port': 1991
         }
-
-        test_data = json.dumps(test_data)
-        headers = {'Content-type': 'application/json'}
-
-        self.connection.patch(
-            url=self.links['update_client'],
-            data=test_data,
-            headers=headers
-        )
+        self.send_data(self.links['update_client'], test_data)

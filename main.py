@@ -7,12 +7,12 @@ def setDown(self, class_to_close):
     class_to_close.stop()
 
 if __name__ == '__main__':
-
-    webservice = StrawberryApi()
-
     def __init__(self):
         print "test"
+    print "sem ja"
+    webservice = StrawberryApi()
+    print "vseeno naprej"
 
-    atexit.register(setDown, webservice)
+    #atexit.register(setDown, webservice)
     # api.update_client()
     # api.test()

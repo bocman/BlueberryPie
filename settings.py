@@ -9,4 +9,4 @@ PORT = "8000"
 
 BASE_LINK = "{domain}:{port}".format(domain=DOMAIN, port=PORT)
 
-CLIENT_ID = 12
+CLIENT_ID = 1

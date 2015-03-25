@@ -5,3 +5,6 @@ sudo apt-get install python-gst0.10 gstreamer0.10-plugins-good \
 
 AVbin
 sudo apt-get install libavbin-dev libavbin0
+
+
+nano /usr/share/alsa/alsa.conf

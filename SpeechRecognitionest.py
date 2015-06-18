@@ -1,6 +1,10 @@
+#!/usr/bin/env python
+
+
 import pyaudio
 import os
 import speech_recognition as SpeachRecognizer
+import speech_recognition as sr
 
 
 def excel():

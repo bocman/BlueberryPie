@@ -35,6 +35,7 @@ class SpeachSynth(object):
         Function use functionality of the Google TTS speech.
         :param input_text: Text which should be converted into speech
         """
+
         player = gst.element_factory_make("playbin", "player")
         player.set_property(
             'uri', "file://" + os.path.abspath(self.speech_filename)
@@ -53,7 +54,7 @@ class SpeachSynth(object):
 
             time.sleep(audio.info.length + 0.2)
 
-            print self.time_to_wait
+            print "time to wait is - " + str(self.time_to_wait)+ " - seconds"
 
         except ConnectionError:
             print "Can't speak, because connection is down"

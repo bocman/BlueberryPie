@@ -1,5 +1,8 @@
+#!/usr/bin/python
+
 import atexit
 import socket
+import time
 import re
 from threading import Thread
 import pyaudio
@@ -18,35 +21,75 @@ def setDown(self, class_name):
     class_name.stop()
 
 
-def speech_actions(source):
+def speech_actions(recognizer, audio):   
     question = WolframAlphaAPI()
-    audio = speech_recognizer.listen(source)
-    audio_text = speech_recognizer.recognize(audio)
+    
+    def compare_second_word(text, searched_word):
+        split_text = text.split()
+        order_text = "{0} {1}".format(split_text[1], split_text[2])
+        if order_text == searched_word:
+            return True
+        return False
+    
+    def __play_song(audio_text):
+        re_expression = re.match( r'.* play song (?P<song_name>.*).*', audio_text, re.M|re.I)
+        song_name = re_expression.group('song_name')
+        print "-->" + song_name
 
-    answer = question.make_question(audio_text)
-    speech.speak(answer)
-    #speech_recognizer.pause_threshold = speech.time_to_wait
+    def __update_client():
+        print "sem updateal client"
+
+    try:
+        audio_text = recognizer.recognize(audio).lower()
+        print audio_text
+        print "-----------------------------------------------------------------------"
+        print "-----------------------------------------------------------------------"
+
+        if audio_text.startswith(settings.CLIENT_NAME.lower()):
+            if compare_second_word(audio_text, "play song"):
+                __play_song(audio_text)
+
+            if compare_second_word(audio_text, "update client"):
+                __update_client()
+
+                
+
+        #answer = question.make_question(audio_text)
+        #print "malina: Answer is- "+str(audio_text)
+
+        print "-----------------------------------------------------------------------"
+        print "-----------------------------------------------------------------------"
+        #speech.speak(answer)
+        #recognizer.pause_threshold = speech.time_to_wait
+    except LookupError:
+        print("malina: Oops! Didn't catch that")
+
+
+
 
 if __name__ == '__main__':
-    
-    webservice = StrawberryAPI()
+    threads = []  
+    #webservice = StrawberryAPI()
     #speech = SpeachSynth()
     
-    print "sem naprej v sistemu"
-    #speech_recognizer = sr.Recognizer()
-    #speech_recognizer.energy_threshold = 3000
-    threads = []
+    print "malina: I'm ready"
+    
 
-    def __init__(self):
-        pass
-        # webservice.get_client()
-        # webservice.update_client()        
+    def __init__(self):   
+        pass  
+        webservice.get_client()
+        webservice.update_client()        
         initialize_threads(threads)
 
-    #with sr.Microphone() as source:
-     #   while True:
-      #      speech_actions(source)
-    
-    #speech.speak("Thats what she said")
 
+
+    r = sr.Recognizer()
+    r. energy_threshold = 2000
+    r.listen_in_background(sr.Microphone(), speech_actions)
+
+
+    #while True:
+     #   time.sleep(0.1)
+    
     #atexit.register(setDown, webservice)
+

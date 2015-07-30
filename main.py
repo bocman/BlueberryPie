@@ -10,8 +10,9 @@ import speech_recognition as sr
 
 import settings
 from webservice import StrawberryAPI
-from gpioAPI import RaspberryGPIO
 from speechAPI import SpeachSynth, WolframAlphaAPI
+if settings.CLIENT_TYPE == "raspberry":
+    from gpioAPI import RaspberryGPIO
 
 
 def initialize_threads(self, thread_list):
@@ -25,7 +26,8 @@ def setDown(self, class_name):
 
 def speech_actions(recognizer, audio):
     question = WolframAlphaAPI()
-    raspberry_gpio = RaspberryGPIO()
+    if settings.CLIENT_TYPE == "raspberry":
+        raspberry_gpio = RaspberryGPIO()
 
     def compare_second_word(text, searched_word):
         split_text = text.split()
@@ -55,29 +57,30 @@ def speech_actions(recognizer, audio):
             if compare_second_word(audio_text, "update client"):
                 __update_client()
 
-            if compare_second_word(audio_text, "activate green light"):
-                print "sem notri"
-                raspberry_gpio.activate(7)
+            if settings.CLIENT_TYPE == "raspberry":
+                if compare_second_word(audio_text, "activate green light"):
+                    print "sem notri"
+                    raspberry_gpio.activate(7)
 
-            if compare_second_word(audio_text, "deactivate green light"):
-                print "sem notri"
-                raspberry_gpio.deactivate(7)
+                if compare_second_word(audio_text, "deactivate green light"):
+                    print "sem notri"
+                    raspberry_gpio.deactivate(7)
 
-            if compare_second_word(audio_text, "activate red light"):
-                print "sem notri"
-                raspberry_gpio.activate(7)
+                if compare_second_word(audio_text, "activate red light"):
+                    print "sem notri"
+                    raspberry_gpio.activate(7)
 
-            if compare_second_word(audio_text, "deactivate red light"):
-                print "sem notri"
-                raspberry_gpio.deactivate(7)
+                if compare_second_word(audio_text, "deactivate red light"):
+                    print "sem notri"
+                    raspberry_gpio.deactivate(7)
 
-            if compare_second_word(audio_text, "activate yellow light"):
-                print "sem notri"
-                raspberry_gpio.activate(7)
+                if compare_second_word(audio_text, "activate yellow light"):
+                    print "sem notri"
+                    raspberry_gpio.activate(7)
 
-            if compare_second_word(audio_text, "deactivate yellow light"):
-                print "sem notri"
-                raspberry_gpio.deactivate(7)
+                if compare_second_word(audio_text, "deactivate yellow light"):
+                    print "sem notri"
+                    raspberry_gpio.deactivate(7)
 
 
         # answer = question.make_question(audio_text)
@@ -86,28 +89,26 @@ def speech_actions(recognizer, audio):
         print "-----------------------------------------------------------------------"
         print "-----------------------------------------------------------------------"
         # speech.speak(answer)
-        # recognizer.pause_threshold = speech.time_to_wait
+
     except LookupError:
         print("malina: Oops! Didn't catch that")
 
 if __name__ == '__main__':
     threads = []
-    # webservice = StrawberryAPI()
-    # speech = SpeachSynth()
+    webservice = StrawberryAPI()
+    speech = SpeachSynth()
 
     print "malina: I'm ready"
 
     def __init__(self):
-        pass
+        webservice.update_client()
+        initialize_threads(threads)
         # webservice.get_client()
         # webservice.update_client()
-        # initialize_threads(threads)
+
 
     r = sr.Recognizer()
     r. energy_threshold = 2000
     r.listen_in_background(sr.Microphone(), speech_actions)
 
-    # while True:
-    #    time.sleep(0.1)
-
-    # atexit.register(setDown, webservice)
+    atexit.register(setDown, webservice)

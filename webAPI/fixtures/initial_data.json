@@ -1,0 +1,603 @@
+[
+  {
+    "model": "client.device_GPIO",
+    "pk": 1,
+    "fields": {
+      "pin_number": "1",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 2,
+    "fields": {
+      "pin_number": "2",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 3,
+    "fields": {
+      "pin_number": "3",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 4,
+    "fields": {
+      "pin_number": "4",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 5,
+    "fields": {
+      "pin_number": "5",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 6,
+    "fields": {
+      "pin_number": "6",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 7,
+    "fields": {
+      "pin_number": "7",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 8,
+    "fields": {
+      "pin_number": "8",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 9,
+    "fields": {
+      "pin_number": "9",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 10,
+    "fields": {
+      "pin_number": "10",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 11,
+    "fields": {
+      "pin_number": "11",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 12,
+    "fields": {
+      "pin_number": "12",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 13,
+    "fields": {
+      "pin_number": "13",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 14,
+    "fields": {
+      "pin_number": "14",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 15,
+    "fields": {
+      "pin_number": "15",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 16,
+    "fields": {
+      "pin_number": "16",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 17,
+    "fields": {
+      "pin_number": "17",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 18,
+    "fields": {
+      "pin_number": "18",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 19,
+    "fields": {
+      "pin_number": "19",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 20,
+    "fields": {
+      "pin_number": "20",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 21,
+    "fields": {
+      "pin_number": "21",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 22,
+    "fields": {
+      "pin_number": "22",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 23,
+    "fields": {
+      "pin_number": "23",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 24,
+    "fields": {
+      "pin_number": "24",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 25,
+    "fields": {
+      "pin_number": "25",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 26,
+    "fields": {
+      "pin_number": "26",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 27,
+    "fields": {
+      "pin_number": "27",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 28,
+    "fields": {
+      "pin_number": "28",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 29,
+    "fields": {
+      "pin_number": "29",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 30,
+    "fields": {
+      "pin_number": "30",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 31,
+    "fields": {
+      "pin_number": "31",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 32,
+    "fields": {
+      "pin_number": "32",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 33,
+    "fields": {
+      "pin_number": "33",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 34,
+    "fields": {
+      "pin_number": "34",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 35,
+    "fields": {
+      "pin_number": "35",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 36,
+    "fields": {
+      "pin_number": "36",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 37,
+    "fields": {
+      "pin_number": "37",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 38,
+    "fields": {
+      "pin_number": "38",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 39,
+    "fields": {
+      "pin_number": "39",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  },
+  {
+    "model": "client.device_GPIO",
+    "pk": 40,
+    "fields": {
+      "pin_number": "40",
+      "name": "----",
+      "description": "----",
+      "is_activated": false,
+      "is_input": false,
+      "interval": 0,
+      "is_general": false,
+      "client": 0,
+      "group": 0
+    }
+  }
+
+]

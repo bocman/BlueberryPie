@@ -7,6 +7,7 @@ from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
 
+
 from models import device_GPIO
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -42,3 +43,4 @@ class GPIODetailView(generics.RetrieveUpdateDestroyAPIView):
     def patch(self, request, *args, **kwargs):
         print request.DATA
         return self.update(request, *args, **kwargs)
+        

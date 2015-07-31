@@ -22,5 +22,5 @@ class GPIOSerializer(serializers.HyperlinkedModelSerializer):
         model = device_GPIO
         fields = (
                    'pin_number', 'is_activated', 'is_input',
-                   'interval', 'is_general', 'name', 'group'
+                   'interval', 'is_general', 'name'
                  )

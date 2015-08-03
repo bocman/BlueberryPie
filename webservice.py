@@ -28,7 +28,7 @@ class StrawberryAPI(object):
     links = {
         "clients": settings.BASE_LINK + "/webservice/clients/",
         "update_client": settings.BASE_LINK + "/webservice/clients/" + str(settings.CLIENT_KEY) + "/",
-        "client": settings.BASE_LINK + "/webservice/clients/" + str(settings.CLIENT_KEY) + "/"
+        #"client": settings.BASE_LINK + "/webservice/clients/" + str(settings.CLIENT_KEY) + "/"
     }
 
     def __init__(self, username=None, password=None):
@@ -74,10 +74,11 @@ class StrawberryAPI(object):
         data = json.dumps(data, default=self.date_handler)
         headers = {'Content-type': 'application/json'}
         if action_type == "GET":
+            print "esemmsad"
             print self.connection.get(url=page_url)
 
-        elif action_type == "PATCH":
-            self.connection.patch(url=page_url, data=data, headers=headers)
+        elif action_type == 'PATCH':
+            requests.patch(url=page_url, data=data, headers=headers)
 
     def update_client(self, data=None):
         self.send_data(self.links['update_client'], "PATCH", data)

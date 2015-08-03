@@ -7,7 +7,7 @@ BASE_LINK = "{domain}:{port}".format(domain=DOMAIN, port=PORT)
 
 
 # Basic settings Blueberry
-CLIENT_KEY = "2GTigBxys1qBB7ex2oQuHmUKqZqCryqY"
+CLIENT_KEY = "AOGyfdmqSXQ62Omhgy21VH1mFKAsmLHc"
 CLIENT_NAME = ""
 CLIENT_ADRESS = ""
 CLIENT_PORT = 8084

@@ -98,6 +98,8 @@ FIXTURE_DIRS = (
    "%s/fixtures" % BASE_DIR,
 )
 
+CLIENT_TYPE = "default"
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 

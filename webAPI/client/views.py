@@ -7,10 +7,10 @@ from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
 
-if settings.CLIENT_TYPE == "raspberry":
-    import RPi.GPIO as GPIO
 
 from models import device_GPIO
+
+import webAPI.settings as settings
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -45,10 +45,16 @@ class GPIODetailView(generics.RetrieveUpdateDestroyAPIView):
     def patch(self, request, *args, **kwargs):
         item_id = kwargs.get('pk', None)
         if 'is_activated' in request.data:
+            status = request.data.get('is_activated', None)
+            if settings.CLIENT_TYPE == "raspberry":
+                GPIO.setmode(GPIO.BOARD)
+                GPIO.setup(pin, GPIO.OUT)
+                GPIO.output(pin, status)
+
+         
             print "sem ja"
         else:
             print "nisem ne"
-
 
         return self.update(request, *args, **kwargs)
         

@@ -6,11 +6,13 @@ from rest_framework import mixins
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework import status
-
+import time
 
 from models import device_GPIO
-
 import webAPI.settings as settings
+if settings.CLIENT_TYPE == "raspberry":
+    import RPi.GPIO as GPIO
+    import pigpio
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -43,18 +45,16 @@ class GPIODetailView(generics.RetrieveUpdateDestroyAPIView):
         return self.get(request, *args, **kwargs)
 
     def patch(self, request, *args, **kwargs):
-        item_id = kwargs.get('pk', None)
+        item_id = int(kwargs.get('pk', None))
         if 'is_activated' in request.data:
             status = request.data.get('is_activated', None)
+            status = False if status == 'True' else True
             if settings.CLIENT_TYPE == "raspberry":
-                GPIO.setmode(GPIO.BOARD)
-                GPIO.setup(pin, GPIO.OUT)
-                GPIO.output(pin, status)
-
-         
-            print "sem ja"
-        else:
-            print "nisem ne"
+                #GPIO.setmode(GPIO.BOARD)
+                #GPIO.setup(item_id, GPIO.OUT)
+                #GPIO.output(item_id, status)
+                pi = pigpio.pi()
+                pi.write(item_id, status)
 
         return self.update(request, *args, **kwargs)
         

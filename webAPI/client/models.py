@@ -39,9 +39,10 @@ class device_GPIO(models.Model):
     client = models.PositiveIntegerField(
         default=None
         )
-#    group = models.PositiveIntegerField(
- #       default=None,
-  #      )
+    is_used = models.BooleanField(
+        default=False,
+        blank=False, null=False
+        )
     is_deleted = models.BooleanField(
         default=False,
     )

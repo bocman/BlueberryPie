@@ -95,12 +95,13 @@ def speech_actions(recognizer, audio):
 
 if __name__ == '__main__':
     threads = []
-    webservice = StrawberryAPI()
-    speech = SpeachSynth()
+    #webservice = StrawberryAPI()
+   # speech = SpeachSynth()
 
     print "malina: I'm ready"
 
     def __init__(self):
+        pass
         webservice.update_client()
         initialize_threads(threads)
         # webservice.get_client()
@@ -111,4 +112,4 @@ if __name__ == '__main__':
     r. energy_threshold = 2000
     r.listen_in_background(sr.Microphone(), speech_actions)
 
-    atexit.register(setDown, webservice)
+   # atexit.register(setDown, webservice)

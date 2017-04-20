@@ -1,3 +1,10 @@
+Novo
+sudo apt-get install rabbitmq-server
+
+
+
+
+
 pygst
 --------------
 sudo apt-get install python-gst0.10 gstreamer0.10-plugins-good \
@@ -8,3 +15,8 @@ sudo apt-get install libavbin-dev libavbin0
 
 
 nano /usr/share/alsa/alsa.conf
+
+
+CELERY _TEMp
+python manage.py celerybeat --verbosity=2 --loglevel=DEBUG
+python manage.py celeryd --verbosity=2 --loglevel=DEBUG

@@ -37,15 +37,19 @@ SYSTEM_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'client',
 )
 
 THIRD_PARTY_APPS = (
+    'rest_framework',
     'djcelery',
 )
 
-INSTALLED_APPS = SYSTEM_APPS + THIRD_PARTY_APPS
+CUSTOM_SUBAPPS = (
+    'client',
+    'modules',
+)
+
+INSTALLED_APPS = SYSTEM_APPS + THIRD_PARTY_APPS + CUSTOM_SUBAPPS
 
 
 MIDDLEWARE_CLASSES = (

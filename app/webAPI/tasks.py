@@ -1,14 +1,14 @@
-from celery import task
-from celery.utils.log import get_task_logger
+# # from celery import task
+# # from celery.utils.log import get_task_logger
 
-import logging
+# import logging
 
-logger = get_task_logger(__name__)
+# logger = get_task_logger(__name__)
 
-# A periodic task that will run every minute (the symbol "*" means every)
-@periodic_task(run_every=(crontab(hour="*", minute="*", day_of_week="*")))
-def test_task():
-    logger.info("Start task")
-    now = datetime.now()
-    result = "BOSTJAN NOVAK DELA JA SUPER"
-    logger.info("Task finished: result = %i" % result)
+# # A periodic task that will run every minute (the symbol "*" means every)
+# @periodic_task(run_every=(crontab(hour="*", minute="*", day_of_week="*")))
+# def test_task():
+#     logger.info("Start task")
+#     now = datetime.now()
+#     result = "BOSTJAN NOVAK DELA JA SUPER"
+#     logger.info("Task finished: result = %i" % result)

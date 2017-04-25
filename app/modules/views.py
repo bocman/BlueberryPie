@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from models import SensorTemperatureHumidity
+from serializers import SensorTemperatureHumiditySerializer
 
-# Create your views here.
+class SensorTemperatureHumidityViewSet(viewsets.ModelViewSet):
+    """ ViewSet for viewing and editing temperature and humidity from
+        sensor
+     """
+    queryset = SensorTemperatureHumidity.objects.all()
+    serializer_class = SensorTemperatureHumiditySerializer

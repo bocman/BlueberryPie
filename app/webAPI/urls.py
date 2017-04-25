@@ -1,8 +1,13 @@
 from django.conf.urls import url, include, patterns
 from rest_framework import routers
 from client import views
+from modules.views import SensorTemperatureHumidityViewSet
 
 router = routers.DefaultRouter()
+# router.register(prefix='modules', viewset=ModuleViewSet)
+# router.register(prefix='sensors', viewset=SensorViewSet)
+
+router.register(prefix='api/temperature', viewset=SensorTemperatureHumidityViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
@@ -14,3 +19,5 @@ urlpatterns = patterns('',
    
     url(r'^api/ping/', views.Ping.as_view(), name='ping')
 )
+
+urlpatterns += router.urls
